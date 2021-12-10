@@ -9,4 +9,14 @@ acl:
   - database: wordpress
     user: wordpress
     access: ALL
+users:
+  - name: francis
+    password: $MYSQL_FRANCIS_PASSWORD
     
+databases:
+  - name: francis
+  
+acl:
+  - database: francis
+    user: francis
+    access: ALL    
