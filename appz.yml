@@ -35,4 +35,6 @@ properties:
       vault: MYSQL_WORDPRESS_PASSWORD
     MYSQL_ROOT_PASSWORD:
       vault: MYSQL_ROOT_PASSWORD_KEY
+    MYSQL_FRANCIS_PASSWORD:
+      vault: MYSQL_FRANCIS_PASSWORD
     revision : 26
