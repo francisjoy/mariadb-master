@@ -3,10 +3,13 @@ users:
     password: $MYSQL_WORDPRESS_PASSWORD
   - name: francis
     password: $MYSQL_FRANCIS_PASSWORD
+  - name: guest
+    password: $MYSQL_GUEST_PASSWORD
     
 databases:
   - name: wordpress
   - name: francis
+  - name: guestdb
   
 acl:
   - database: wordpress
@@ -15,3 +18,6 @@ acl:
   - database: francis
     user: francis
     access: ALL 
+  - database: guestdb
+    user: guest
+    access: ALL
