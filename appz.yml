@@ -37,4 +37,6 @@ properties:
       vault: MYSQL_ROOT_PASSWORD_KEY
     MYSQL_FRANCIS_PASSWORD:
       vault: MYSQL_FRANCIS_PASSWORD
+    MYSQL_GUEST_PASSWORD:
+      vault: MYSQL_GUEST_PASSWORD
     revision : 27
