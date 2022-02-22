@@ -1,11 +1,17 @@
 users:
   - name: wordpress
     password: $MYSQL_WORDPRESS_PASSWORD
-
+  - name: springbootweb
+    password: $MYSQL_SPRINGBOOTWEB_PASSWORD
+    role: superuser
 databases:
   - name: wordpress
+  - name: springbootweb
   
 acl:
   - database: wordpress
     user: wordpress
+    access: ALL
+  - database: springbootweb
+    user: springbootweb
     access: ALL
