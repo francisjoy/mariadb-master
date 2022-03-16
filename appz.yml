@@ -4,7 +4,7 @@ app:
     notify: fjoy@ecloudcontrol.com
 
 build:
-    version: 10.4a
+    version: 10.4
     env: DEV
     build_file: none
     output_files: output/*.zip
@@ -13,18 +13,17 @@ build:
 deploy:
     context: francisjoy/DEV
     type: statefulset
-    replicas: 1
+    replicas: 3
     port:
     - 3306
+    - 9104
 
 volumes:
   - claim: mariadb-master-data
-    class: microk8s-hostpath
     mount: /appz/data
     name: data
     size: 5Gi
   - claim: mariadb-master-backup
-    class: microk8s-hostpath
     mount: /appz/backup
     name: backup
     size: 5Gi
